@@ -1,0 +1,46 @@
+﻿<Window x:Name="admin1" x:Class="Hotel_Administration2._0.admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Администратор" 
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize">
+    <Grid Background="#ffdadada">
+        <Menu Style="{StaticResource MaterialDesignMenu}" 
+              Height="{DynamicResource {x:Static SystemParameters.MenuHeightKey}}" 
+              VerticalAlignment="Top" 
+              HorizontalAlignment="Center" 
+              MinHeight="48"
+              MaxHeight="49"
+              Width="auto">
+            <MenuItem Header="Регистрация клиента" 
+                      MinHeight="50"
+                      FontSize="12" 
+                      Style="{StaticResource MaterialDesignMenuItem}" 
+                      Height="{DynamicResource {x:Static SystemParameters.MenuHeightKey}}" 
+                      Click="reg" />
+            <MenuItem Header="Вселение клиента" 
+                      MinHeight="50"
+                      FontSize="12" 
+                      Style="{StaticResource MaterialDesignMenuItem}" 
+                      Height="{DynamicResource {x:Static SystemParameters.MenuHeightKey}}" 
+                      Click="vselenie"/>
+            <MenuItem Header="Настройка паролей"
+                      MinHeight="50"
+                      FontSize="12"
+                      Style="{StaticResource MaterialDesignMenuItem}" 
+                      Height="{DynamicResource {x:Static SystemParameters.MenuHeightKey}}"
+                      Click="managePaswd"/>
+            <Button x:Name="SignOut"
+                    Content="Сменить пользователя"
+                    Click="SignOut_OnClick"
+            />
+        </Menu>
+        <Frame x:Name="FrameAdmin" 
+               Margin="10, 58, 10, 10" 
+               NavigationUIVisibility ="Hidden"
+               />
+    </Grid>
+</Window>
