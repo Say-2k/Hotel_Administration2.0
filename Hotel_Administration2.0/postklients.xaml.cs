@@ -54,7 +54,6 @@ namespace Hotel_Administration2._0
         {
             dataDogovora_Start.Text = dataDogovora_Start.DisplayDate.Date.ToShortDateString();
             dataDogovora_End.Text = dataDogovora_End.DisplayDate.Date.ToShortDateString();
-            postoyannieKlienti.ItemsSource = Connect.Ds.Tables["postklients"].DefaultView;
             postoyannieKlienti.Columns[0].Visibility = Visibility.Hidden;
             postoyannieKlienti.AutoGenerateColumns = true;
             postoyannieKlienti.CanUserAddRows = false;

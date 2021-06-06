@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:Hotel_Administration2._0"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      Title="migrants">
+      Title="migrants"
+      Loaded="Migrants_OnLoaded">
     <Grid x:Name="vselenie_page" 
           Background="#ffdadada">
         <Border MinWidth="200" 
@@ -22,13 +23,13 @@
             </Border.Effect>
             <StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <DatePicker x:Name="dataZaezda"
+                    <DatePicker x:Name="dataStart"
                                 materialDesign:HintAssist.Hint="Дата начала формирования отчёта"
                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
                                 SelectedDateChanged="Filter" 
                                 Margin="0,0,10,0"
                     />
-                    <DatePicker x:Name="dataViezda"
+                    <DatePicker x:Name="dataEnd"
                                 materialDesign:HintAssist.Hint="Дата окончания формирования отчёта"
                                 SelectedDateChanged="Filter" 
                                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
