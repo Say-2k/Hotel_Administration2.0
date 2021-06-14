@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Hotel_Administration2._0"
         mc:Ignorable="d"
-        Title="Авторизация" Height="350.5" Width="450" Loaded="auth_Loaded" Foreground="Black" SnapsToDevicePixels="True">
+        Title="Авторизация" Height="350.5" Width="450" Loaded="auth_Loaded" Foreground="Black" SnapsToDevicePixels="True" Icon="icon.png">
     <Grid Background="#ffdadada">
         <Border MinWidth="200" 
                 Margin="15" 

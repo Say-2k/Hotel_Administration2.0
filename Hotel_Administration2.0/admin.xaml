@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Title="Администратор" 
         SizeToContent="WidthAndHeight"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" Icon="icon.png">
     <Grid Background="#ffdadada">
         <Menu Style="{StaticResource MaterialDesignMenu}" 
               Height="{DynamicResource {x:Static SystemParameters.MenuHeightKey}}" 

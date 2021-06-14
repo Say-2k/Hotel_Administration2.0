@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Менеджер"
-        SizeToContent="WidthAndHeight"
+        SizeToContent="WidthAndHeight" Icon="icon.png"
         >
     <Grid Background="#ffdadada">
         <Menu Style="{StaticResource MaterialDesignMenu}" 

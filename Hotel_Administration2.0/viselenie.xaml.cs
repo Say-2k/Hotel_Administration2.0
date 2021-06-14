@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Hotel_Administration2._0
 {
@@ -29,9 +19,9 @@ namespace Hotel_Administration2._0
                          "FROM (Dogovor INNER JOIN Klient ON Dogovor.IdKlienta = Klient.IdKlienta) " +
                          "INNER JOIN GostinichniyNomer ON Dogovor.NomerPomesheniya = GostinichniyNomer.NomerPomesheniya " +
                          "WHERE Status = 'занят' AND Dogovor.IdKlienta = GostinichniyNomer.IdKlienta";
-            Connect.Table_Fill("Dogovor", sql);
-            Connect.Ds.Tables["Dogovor"].DefaultView.RowFilter = "[Дата выезда] = '" + dataViseleniya_Filter.DisplayDate.Date + "'";
-            dogovora.ItemsSource = Connect.Ds.Tables["Dogovor"].DefaultView;
+            Connect.Table_Fill("Dogovora", sql);
+            Connect.Ds.Tables["Dogovora"].DefaultView.RowFilter = "[Дата выезда] = '" + dataViseleniya_Filter.DisplayDate.Date + "'";
+            dogovora.ItemsSource = Connect.Ds.Tables["Dogovora"].DefaultView;
             dogovora.Columns[0].Visibility = Visibility.Hidden;
             dogovora.Columns[1].Visibility = Visibility.Hidden;
             dogovora.Columns[7].Visibility = Visibility.Hidden;
@@ -63,7 +53,7 @@ namespace Hotel_Administration2._0
 
         private void DataViseleniya_Filter_OnSelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            Connect.Ds.Tables["Dogovor"].DefaultView.RowFilter = "[Дата выезда] = '" + dataViseleniya_Filter.Text + "'";
+            Connect.Ds.Tables["Dogovora"].DefaultView.RowFilter = "[Дата выезда] = '" + dataViseleniya_Filter.Text + "'";
         }
 
         private void DataViseleniya_OnSelectedDateChanged(object sender, SelectionChangedEventArgs e)
